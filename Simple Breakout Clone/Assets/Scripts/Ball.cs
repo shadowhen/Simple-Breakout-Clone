@@ -105,7 +105,7 @@ public class Ball : MonoBehaviour
     {
         // This would prevent the destroying the game object prematurely while
         // the destroy audio is playing
-        // Note: The only problem is that the update call can 
+        // Note: The only problem is that the update call can happen
         yield return new WaitWhile(() => _destroyAudio.isPlaying);
         Destroy(gameObject);
     }
